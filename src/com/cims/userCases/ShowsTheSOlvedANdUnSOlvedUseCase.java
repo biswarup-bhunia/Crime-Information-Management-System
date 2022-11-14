@@ -17,14 +17,14 @@ public class ShowsTheSOlvedANdUnSOlvedUseCase {
 		int i = 0;
 		while (true) {
 
-			System.out.println("Enter 1. to display the solved case");
+			System.out.println("Press & Enter 1. to showcase the solved case");
 
-			System.out.println("Enter 2. to display the unsolved case");
+			System.out.println("Press & Enter 2. to showcase the unsolved case");
 
-			System.out.println("Enter 3. Go back to the home page :) ");
+			System.out.println("Press & Enter 3. Go back to the home page :) ");
 			System.out.println();
 			System.out.println();
-			System.out.println("ENter you CHoice :) ");
+			System.out.println("Enter you Choice :- ");
 
 			int n = sc.nextInt();
 			switch (n) {
@@ -57,7 +57,7 @@ public class ShowsTheSOlvedANdUnSOlvedUseCase {
 
 			default:
 				System.out.println();
-				System.out.println("Please ENter the right Keyword :) ");
+				System.out.println("Please Enter the right Keyword :- ");
 				break;
 
 			}

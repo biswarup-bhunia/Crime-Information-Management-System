@@ -2,7 +2,7 @@ package com.Run;
 
 import java.util.Scanner;
 
-import com.Application.App;
+import com.Application.Main;
 import com.cims.Dao.CrimeInformationManagementSystemDao;
 import com.cims.Dao.CrimeInformationManagementSystemDaoImpl;
 import com.cims.userCases.CrimesStatusUsecase4;
@@ -25,25 +25,19 @@ public class Run {
 		int choice = 0;
 		while (true) {
 
-			System.out.println("Enter you choice !-:)");
-
-			System.out.println("Enter 1. if you want add a crimes");
-
-			System.out.println("Enter 2. if you want add a criminal");
-
-			System.out.println("Enter 3. if you want search by the criminals");
-			System.out.println("Enter 4. if you want search by the crimes");
-
-			System.out.println("Enter 5. changes to the status of the crime_file");
-
-			System.out.println("Enter 6. display the Number of solved and unsolved crimes_file");
-
-			System.out.println("Enter 7. display the no of crimes in the current month");
-			System.out.println("Enter 8. display the Area_wise_ Crimes AND Criminals ");
-			System.out.println("Enter 9. To Exit this  apllication :)");
+			System.out.println("Enter you choice :- ");
+			System.out.println("Press & Enter 1. For add a Crimes ");
+			System.out.println("Press & Enter 2. For add a Criminal ");
+			System.out.println("Press & Enter 3. For searching Criminals data ");
+			System.out.println("Press & Enter 4. For search the Crimes ");
+			System.out.println("Press & Enter 5. For changes to the status on Crime File ");
+			System.out.println("Press & Enter 6. For showcase the Number of solved and unsolved Crimes File ");
+			System.out.println("Press & Enter 7. For showcase the no of crimes in the current month ");
+			System.out.println("Press & Enter 8. For showcase the Area wise Crimes and Criminals ");
+			System.out.println("Press & Enter 0. To Exit the  apllication :-");
 			System.out.println();
 			System.out.println();
-			System.out.println("ENter you CHoice :) ");
+			System.out.println("Enter you Choice :- ");
 
 			choice = sc.nextInt();
 
@@ -87,7 +81,7 @@ public class Run {
 				break;
 
 			default:
-				System.out.println("Please Enter right Keyword :) -");
+				System.out.println("Please Enter right Keyword :- ");
 				break;
 
 			}

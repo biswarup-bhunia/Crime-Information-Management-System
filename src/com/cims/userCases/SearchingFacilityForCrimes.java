@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 import com.cims.Dao.CrimeInformationManagementSystemDao;
 import com.cims.Dao.CrimeInformationManagementSystemDaoImpl;
-import com.cims.model.Crime_files;
-import com.cims.model.Criminal;
+import com.cims.bean.Crime_files;
+import com.cims.bean.Criminal;
 import com.cimsExceptions.CrimeSystemException;
 
 public class SearchingFacilityForCrimes {
@@ -22,21 +22,21 @@ public class SearchingFacilityForCrimes {
 
 		while (true) {
 			System.out.println();
-			System.out.println("ENter 1. if you want to Search by the crime_: name ");
+			System.out.println("Press & Enter 1. if you want to Search by the crime_: name ");
 
-			System.out.println("ENter 2. if you want to Search by the Case :_file no ");
+			System.out.println("Press & Enter 2. if you want to Search by the Case :_file no ");
 
-			System.out.println("ENter 3. Go back to the home page :) ");
+			System.out.println("Press & Enter 3. Go back to the home page : ");
 			System.out.println();
 			System.out.println();
-			System.out.println("ENter you CHoice :) ");
+			System.out.println("Enter you Choice :) ");
 			int ch = sc.nextInt();
 
 			switch (ch) {
 
 			case 1:
 				System.out.println();
-				System.out.println("ENter crime name ");
+				System.out.println("Enter crime name: ");
 				sc.nextLine();
 				String name = sc.nextLine();
 
@@ -49,13 +49,11 @@ public class SearchingFacilityForCrimes {
 					e.printStackTrace();
 				}
 
-				
-
 				break;
 
 			case 2:
 				System.out.println();
-				System.out.println("ENter case:_file no ");
+				System.out.println("Enter case:_file no ");
 				sc.nextLine();
 				int id = sc.nextInt();
 				Crime_files res1 = null;
@@ -66,7 +64,7 @@ public class SearchingFacilityForCrimes {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				
+
 				break;
 
 			case 3:
@@ -74,7 +72,7 @@ public class SearchingFacilityForCrimes {
 				break;
 			default:
 				System.out.println();
-				System.out.println("Please ENter correct keyword :)");
+				System.out.println("Please Enter correct keyword :-");
 				break;
 
 			}

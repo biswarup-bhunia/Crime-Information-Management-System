@@ -22,7 +22,7 @@ public class CimsUtility {
 		String url = "jdbc:mysql://localhost:3306/construct_Week1";
 
 		try {
-			con = DriverManager.getConnection(url, "root", "root");
+			con = DriverManager.getConnection(url, "root", "Root@123");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

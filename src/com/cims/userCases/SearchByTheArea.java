@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 import com.cims.Dao.CrimeInformationManagementSystemDao;
 import com.cims.Dao.CrimeInformationManagementSystemDaoImpl;
-import com.cims.model.Crime_files;
-import com.cims.model.Criminal;
+import com.cims.bean.Crime_files;
+import com.cims.bean.Criminal;
 import com.cimsExceptions.CrimeSystemException;
 
 public class SearchByTheArea {
@@ -19,27 +19,27 @@ public class SearchByTheArea {
 		int i = 0;
 		while (true) {
 
-			System.out.println("Enter 1. to display the area wise crimes");
+			System.out.println("Press & Enter 1. to display the area wise crimes ");
 
-			System.out.println("Enter 2. to display the area wise criminal");
+			System.out.println("Press & Enter 2. to display the area wise criminal ");
 
-			System.out.println("Enter 3. Go back to the home page :) ");
+			System.out.println("Press & Enter 3. Go back to the home page : ");
 			System.out.println();
 			System.out.println();
-			System.out.println("ENter you CHoice :) ");
+			System.out.println("Enter you Choice :- ");
 
 			int n = sc.nextInt();
-			sc.nextLine() ;
+			sc.nextLine();
 			switch (n) {
 
 			case 1:
 				try {
-					
-					System.out.println("Enter area name");
+
+					System.out.println("Enter area name ");
 					String name = sc.nextLine();
-				
-					System.out.println("Enter  area pin_Code");
-					
+
+					System.out.println("Enter  area pin_Code ");
+
 					int pin = sc.nextInt();
 					List<Crime_files> x = dao.displaycrimebyArea(name, pin);
 					System.out.println();
@@ -54,11 +54,11 @@ public class SearchByTheArea {
 
 			case 2:
 				try {
-					
-					System.out.println("Enter area name");
+
+					System.out.println("Enter area name ");
 					String name = sc.nextLine();
-				
-					System.out.println("Enter  area pin_Code");
+
+					System.out.println("Enter  area pin_Code ");
 					int pin = sc.nextInt();
 					List<Criminal> x = dao.displaycriminalbyArea(name, pin);
 					System.out.println();
@@ -76,7 +76,7 @@ public class SearchByTheArea {
 
 			default:
 				System.out.println();
-				System.out.println("Please ENter the right Keyword :) ");
+				System.out.println("Please Enter the right Keyword : ");
 				break;
 
 			}

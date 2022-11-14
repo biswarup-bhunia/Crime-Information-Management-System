@@ -4,61 +4,55 @@ import java.util.Scanner;
 
 import com.cims.Dao.CrimeInformationManagementSystemDao;
 import com.cims.Dao.CrimeInformationManagementSystemDaoImpl;
-import com.cims.model.Crime_files;
+import com.cims.bean.Crime_files;
 
 public class RegisCrimeUseCase1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		
+
 		try {
 
-		System.out.println("Enter Date in this format yyyy/mm/dd");
+			System.out.println("Press & Enter Date in this format yyyy/mm/dd ");
 
-		String dt = sc.nextLine();
+			String dt = sc.nextLine();
 
-	
+			System.out.println("Press & Enter Victims ");
 
-		System.out.println("Enter Victims ");
+			String vt = sc.nextLine();
 
-		String vt = sc.nextLine();
+			System.out.println("Press & Enter of Crime Name like Robbery,Snatching etc !! ");
 
-		System.out.println("Enter of crime Name like robbery kinadping etc !!");
+			String dtcrime = sc.nextLine();
 
-		String dtcrime = sc.nextLine();
+			System.out.println("Press & Enter main Suspect Name ");
 
-		System.out.println("Enter main suspect name ");
+			String suspect = sc.nextLine();
 
-		String suspect = sc.nextLine();
+			System.out.println("Press & Enter Description of Crime ");
 
+			String descrime = sc.nextLine();
+			System.out.println("Press & Enter area of Crime ");
 
-		System.out.println("Enter Description of crime");
+			String area = sc.nextLine();
 
-		String descrime = sc.nextLine();
-		System.out.println("Enter area of crime ");
+			System.out.println("Press & Enter pincode of Area ");
 
-		String area= sc.nextLine();
-		
-		System.out.println("Enter pincode of area");
+			int pin = sc.nextInt();
 
-		int pin = sc.nextInt();
-	   
-		       Crime_files cf = new Crime_files(dt,vt, descrime, suspect, dtcrime) ;
-		       cf.setAre_of_crime(area) ;
-		       cf.setPincode(pin);
-		
-		
-		CrimeInformationManagementSystemDao dao =  new CrimeInformationManagementSystemDaoImpl() ;
-		
-		
-		String ans = dao.registerCrimeFile(cf);
-		
-		System.out.println(ans);
-		}
-		catch (Exception e) {
+			Crime_files cf = new Crime_files(dt, vt, descrime, suspect, dtcrime);
+			cf.setAre_of_crime(area);
+			cf.setPincode(pin);
+
+			CrimeInformationManagementSystemDao dao = new CrimeInformationManagementSystemDaoImpl();
+
+			String ans = dao.registerCrimeFile(cf);
+
+			System.out.println(ans);
+		} catch (Exception e) {
 			// TODO: handle exception
-			System.out.println("Please ENter right data :) ");
+			System.out.println("Please Enter right data : ");
 		}
 
 	}

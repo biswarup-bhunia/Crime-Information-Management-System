@@ -12,8 +12,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.cims.model.Crime_files;
-import com.cims.model.Criminal;
+import com.cims.bean.Crime_files;
+import com.cims.bean.Criminal;
 import com.cims.utility.CimsUtility;
 import com.cimsExceptions.CrimeSystemException;
 
@@ -233,7 +233,7 @@ public class CrimeInformationManagementSystemDaoImpl implements CrimeInformation
 
 			int set = pp.executeUpdate();
 			if (set > 0)
-				msg = "Status will be changed - " + value + "To this case_fileno :)- "+id;
+				msg = "Status will be changed - " + value + "To this case_fileno :)- " + id;
 
 			else
 				throw new CrimeSystemException(id + " !-! This Crime record Doesn't Exits");
@@ -373,7 +373,7 @@ public class CrimeInformationManagementSystemDaoImpl implements CrimeInformation
 	}
 
 	@Override
-	public List<com.cims.model.Criminal> displaycriminalbyArea(String area, int pin) throws CrimeSystemException {
+	public List<com.cims.bean.Criminal> displaycriminalbyArea(String area, int pin) throws CrimeSystemException {
 		List<Criminal> rec = new ArrayList<>();
 
 		Criminal obj = null;

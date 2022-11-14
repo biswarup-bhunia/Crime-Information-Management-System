@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 import com.cims.Dao.CrimeInformationManagementSystemDao;
 import com.cims.Dao.CrimeInformationManagementSystemDaoImpl;
-import com.cims.model.Crime_files;
-import com.cims.model.Criminal;
+import com.cims.bean.Crime_files;
+import com.cims.bean.Criminal;
 
 public class RegisCriminalUseCase2 {
 
@@ -13,54 +13,50 @@ public class RegisCriminalUseCase2 {
 		// TODO Auto-generated method stub
 
 		Scanner sc = new Scanner(System.in);
-		
+
 		try {
 
-		System.out.println("Enter Criminal name");
+			System.out.println("Press & Enter Criminal name ");
 
-		String cn = sc.nextLine();
+			String cn = sc.nextLine();
 
-		System.out.println("Enter age ");
+			System.out.println("Press & Enter age ");
 
-		int age = sc.nextInt();
+			int age = sc.nextInt();
 
-		sc.nextLine();
-		System.out.println("Enter Gender ");
+			sc.nextLine();
+			System.out.println("Press & Enter Gender ");
 
-		String gender = sc.nextLine();
+			String gender = sc.nextLine();
 
-		System.out.println("Enter Address");
+			System.out.println("Press & Enter Address ");
 
-		String add = sc.nextLine();
+			String add = sc.nextLine();
 
-		System.out.println("Enter Indefication");
+			System.out.println("Press & Enter Indefication ");
 
-		String iden = sc.nextLine();
-		System.out.println("Enter Area of police station where the criminal was first arrest");
+			String iden = sc.nextLine();
+			System.out.println("Press & Enter Area of police station where the criminal was first arrest ");
 
-		String area = sc.nextLine();
-		System.out.println("Enter pincode of substation");
+			String area = sc.nextLine();
+			System.out.println("Press & Enter pincode of substation ");
 
-		int pin = sc.nextInt();
-		System.out.println("Enter Case file id");
+			int pin = sc.nextInt();
+			System.out.println("Press & Enter Case file id ");
 
-		int caseid = sc.nextInt();
+			int caseid = sc.nextInt();
 
-		Criminal cr = new Criminal(cn, age, gender, add, iden, area, caseid, pin);
+			Criminal cr = new Criminal(cn, age, gender, add, iden, area, caseid, pin);
 
-		
-		
-		CrimeInformationManagementSystemDao dao =  new CrimeInformationManagementSystemDaoImpl() ;
-		
-		
-		String ans = dao.registerCriminal(cr);
-		
-		System.out.println(ans);
-		
-		}
-		catch (Exception e) {
+			CrimeInformationManagementSystemDao dao = new CrimeInformationManagementSystemDaoImpl();
+
+			String ans = dao.registerCriminal(cr);
+
+			System.out.println(ans);
+
+		} catch (Exception e) {
 			// TODO: handle exception
-			System.out.println("Please ENter right data :) ");
+			System.out.println("Please Enter right data :- ");
 		}
 
 	}

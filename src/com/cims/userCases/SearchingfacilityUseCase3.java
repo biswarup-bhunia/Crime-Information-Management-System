@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 import com.cims.Dao.CrimeInformationManagementSystemDao;
 import com.cims.Dao.CrimeInformationManagementSystemDaoImpl;
-import com.cims.model.Crime_files;
-import com.cims.model.Criminal;
+import com.cims.bean.Crime_files;
+import com.cims.bean.Criminal;
 import com.cimsExceptions.CrimeSystemException;
 
 public class SearchingfacilityUseCase3 {
@@ -23,14 +23,14 @@ public class SearchingfacilityUseCase3 {
 
 		while (true) {
 
-			System.out.println("ENter 1. if you want to Search by the criminal name ");
+			System.out.println("Press & Enter 1. If you want to Search by the criminal name ");
 
-			System.out.println("ENter 2. if you want to Search by the crimes id ");
+			System.out.println("Press & Enter 2. If you want to Search by the crimes id ");
 
-			System.out.println("ENter 3. Go back to the home page :) ");
+			System.out.println("Press & Enter 3. Go back to the home page :) ");
 			System.out.println();
 			System.out.println();
-			System.out.println("ENter you CHoice :) ");
+			System.out.println("Enter you Choice :- ");
 			int ch = sc.nextInt();
 
 			switch (ch) {
@@ -38,7 +38,7 @@ public class SearchingfacilityUseCase3 {
 			case 1:
 				System.out.println();
 				sc.nextLine();
-				System.out.println("ENter criminal name ");
+				System.out.println("Enter criminal name ");
 				String name = sc.nextLine();
 
 				List<Criminal> res = null;
@@ -47,10 +47,8 @@ public class SearchingfacilityUseCase3 {
 					res.forEach(s -> System.out.println(s));
 				} catch (CrimeSystemException e) {
 					// TODO Auto-generated catch block
-					System.out.println( e.getMessage());
+					System.out.println(e.getMessage());
 				}
-
-				
 
 				break;
 
@@ -67,7 +65,7 @@ public class SearchingfacilityUseCase3 {
 					// TODO Auto-generated catch block
 					System.out.println(e.getMessage());
 				}
-			
+
 				break;
 
 			case 3:
