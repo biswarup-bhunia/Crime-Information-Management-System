@@ -1,2 +1,8 @@
-# Crime-Information-Management-System
-THis is my final constructor week project
+Project Code - fortunate-ship-9511
+
+This is my Construction Week. This is basically a java backend project where you can add crime and criminal information. 
+Track them and change there status. 
+Update and track.
+
+I used JAVA Core, sql and jdbc to showcase and connect the application to the user.
+
