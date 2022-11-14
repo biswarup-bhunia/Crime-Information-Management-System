@@ -1,4 +1,4 @@
-                                                     CRIME-INFORMATION-MANAGEMENT-SYSTEM
+                                CRIME-INFORMATION-MANAGEMENT-SYSTEM
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This is my Construction Week. This is basically a java backend project where you can add crime and criminal information. 
